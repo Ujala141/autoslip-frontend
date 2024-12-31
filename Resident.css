@@ -1,0 +1,294 @@
+.resident-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    /*width: 250px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; 
+    height: 100vh; */
+    background-color: #188225; /* Prominent green for the sidebar */
+    color: #ffffff; /* White text for contrast */
+    padding: 20px; /* Padding for spacing inside the sidebar */
+    width: 250px; /* Increased width for the sidebar */
+    transition: width 0.3s ease; /* Smooth transition for width changes */
+    overflow-y: auto; /* Enable vertical scrolling when content overflows */
+    max-height: 100%; /* Prevent sidebar from exceeding container height */
+
+  }
+  
+  /* Sidebar Profile Section */
+  .profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+   .profile h2 {
+    margin: 0;
+    font-size: 1.8em;
+    background-color: transparent;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+   .profile p {
+    margin-top: 5px;
+    font-size: 1.1em;
+    color: #e1e4e8;
+    font-weight: 400;
+  }
+  
+  /* Navigation Links */
+  /*.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+  }*/
+  
+ 
+  
+  .nav-links button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin: 8px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .nav-links button:hover  {
+    background-color: #388E3C;
+    transform: scale(1.03);
+  }
+  
+  /* Logout Button */
+  /*.logout-btn {
+    margin-top: auto; /* Stick logout button to the bottom 
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .logout-btn:hover {
+    background-color: darkred;
+  }*/
+  
+  /* Content Area Styling */
+  .content-area {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+  }
+  .profile-container,.warning-letter-container,.slip-history-container,.slip-request-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f7f7f7;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    background-color: #4CAF50;
+    color: white;
+    
+  }
+  
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+  }
+  
+  .profile-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-item p {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 15px;
+
+  }
+  
+  .toggle-password-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .toggle-password-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .password-form {
+    margin-top: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+/* Button container for Update and Cancel buttons */
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .submit-btn, .cancel-btn {
+    width: 48%;
+    padding: 10px;
+    box-sizing: border-box; /* Ensures width accounts for padding/border */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin: 0;
+}
+  .submit-btn{
+    background-color: #388E3C;
+  }
+ 
+  .submit-btn:hover {
+    background-color: #2E7D32;
+  }
+  
+  .cancel-btn {
+    background-color: #e74c3c;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .profile-pair {
+      flex-direction: column;
+    }
+  
+    .form-buttons {
+      flex-direction: column;
+      
+    }
+  
+    .submit-btn, .cancel-btn, .logout-btn {
+      width: 100%;
+    }
+  }
+
+  
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .submit-btn-slip {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  input[disabled] {
+    background-color: #e9ecef;
+    color: #6c757d;
+  }
+  /*.slip-history-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }*/
+  
+  h3 {
+    text-align: left;
+    margin-bottom: 20px;
+    background-color: #4CAF50;
+    color: white;
+  }
+  .recharts-tooltip-wrapper {
+    font-size: 14px;
+  
+  }
+  table {
+    width: 100%;
+    border-collapse: 5px;
+    margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #dee2e6;
+  min-width: 50px;
+  transition: background-color 0.3s ease;
+}
+th {
+    background-color: #388E3C;
+    color: white;
+    font-weight: bold;
+}
+.tble-row:hover{
+  box-shadow: #f1f3f5;
+}
